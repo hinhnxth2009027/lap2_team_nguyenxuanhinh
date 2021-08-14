@@ -35,10 +35,15 @@ document.addEventListener('DOMContentLoaded',function (){
             <div class="col-12">
             <i style="font-size: 25px; color: #727171" class="fas fa-share-square"></i>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <i style="font-size: 25px; color: #727171" class="fas fa-comments"></i>
+            <i slot="${i}" onclick="comment(this.slot)" style="font-size: 25px; color: #727171" class="fas fa-comments"></i>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <i style="font-size: 25px; color: #e55656" class="far fa-heart"></i>
+            <div id="comment_${i}" class="fb-comments d-none" data-href="http://andy-autos.herokuapp.com/index.html" data-width="" data-numposts="5"></div>
 </div>
 </div>`)
     }
 })
+
+function comment(id){
+    $(`#comment_${id}`).toggleClass('d-none')
+}
