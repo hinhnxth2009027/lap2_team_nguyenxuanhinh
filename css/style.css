@@ -89,3 +89,18 @@ a{
 i {
     cursor: pointer;
 }
+
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav > li:hover {
+    color: aqua;
+}
+
+.nav > li {
+    margin: 0 10px;
+}
