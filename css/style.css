@@ -1,13 +1,46 @@
+*{
+    font-family: 'Barlow', sans-serif;
+}
 .logo {
     height: 50px;
     width: 50px;
     border-radius: 50%;
 }
-
-
-form {
-    margin-left:44% ;
+.header_container{
+    position: relative;
 }
+
+@media screen and (max-width: 992px) {
+    .iconmenu{
+        position: absolute;
+        top: 13px;
+        right: 10px;
+        font-size: 25px;
+    }
+    .menu_items{
+        display: none;
+    }
+    .ul_container>li{
+        width: 100%;
+        text-align: center;
+    }
+    .logo_items{
+        width: 100%;
+        display: block;
+    }
+    .container_images {
+        height: 300px;
+        display: flex;
+        align-items: center;
+    }
+}
+
+.container_images > div > img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
 
 a{
     text-decoration: none;
@@ -36,3 +69,21 @@ a{
 .phone{
     color: #166088;
 }
+.container_images > div {
+    height: 100%;
+}
+
+@media screen and (min-width: 993px) {
+    .iconmenu{
+        display: none!important;
+    }
+    .container_images {
+        height: 450px;
+        display: flex;
+        align-items: center;
+    }
+}
+
+
+
+
