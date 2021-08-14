@@ -25,15 +25,31 @@
         width: 100%;
         display: block;
     }
+    .container_images {
+        height: 300px;
+        display: flex;
+        align-items: center;
+    }
 }
+
+.container_images > div > img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.container_images > div {
+    height: 100%;
+}
+
 @media screen and (min-width: 993px) {
     .iconmenu{
         display: none!important;
     }
+    .container_images {
+        height: 450px;
+        display: flex;
+        align-items: center;
+    }
 }
-.container_images {
-    height: 450px;
-    display: flex;
-    align-items: center;
-}
+
 
