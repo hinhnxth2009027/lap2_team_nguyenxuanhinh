@@ -40,6 +40,35 @@
     width: 100%;
     object-fit: cover;
 }
+
+
+a{
+    text-decoration: none;
+}
+.facebook{
+    color: #395498;
+}
+.twitter{
+    color: #5da9dd;
+}
+.instagram{
+    color: #e1446c;
+}
+.linkedin{
+    color: #0077b5;
+}
+.youtube{
+    color: #fe0000;
+}
+.home{
+    color: #166088;
+}
+.email{
+    color: #166088;
+}
+.phone{
+    color: #166088;
+}
 .container_images > div {
     height: 100%;
 }
@@ -54,6 +83,7 @@
         align-items: center;
     }
 }
+
 
 
 
