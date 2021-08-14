@@ -1,3 +1,6 @@
+*{
+    font-family: 'Barlow', sans-serif;
+}
 .logo {
     height: 50px;
     width: 50px;
@@ -51,5 +54,6 @@
         align-items: center;
     }
 }
+
 
 
