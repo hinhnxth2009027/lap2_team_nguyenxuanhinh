@@ -231,3 +231,10 @@ header {
         width: 100%;
     }
 }
+
+.images_car{
+    transition: 0.4s;
+}
+.images_car:hover{
+    opacity: 0.5;
+}
