@@ -1,9 +1,9 @@
-$('.iconmenu').click(function (){
+$('.iconmenu').click(function () {
     $('.menu_container').toggleClass('menu_items')
 })
 $('.carousel').carousel()
 
-document.addEventListener('DOMContentLoaded',function (){
+document.addEventListener('DOMContentLoaded', function () {
     var img = [
         "https://i.pinimg.com/originals/f2/75/1c/f2751c25fe1f3e95dec1e68ab005ef89.jpg",
         "https://cdn.wallpapersafari.com/72/88/VrHBJd.jpg",
@@ -28,22 +28,54 @@ document.addEventListener('DOMContentLoaded',function (){
         "Mercedes arranged up to 4 seats facing each other, bringing the total number of seats of the car to 6. 2 seats with the cabin compartment can be collapsed when not in use to increase space for the 2 main seats.",
         "When in the folded state, the underside of the chair will appear an electronic screen to help users adjust systems such as air conditioning, sound, relaxation, ...",
     ]
-    for (let i = 0; i < img.length; i++) {
+
+    var months = [
+        "01-11-2020",
+        "01-12-2020",
+        "01-01-2021",
+        "01-02-2021",
+        "01-03-2021",
+        "01-04-2021",
+        "01-05-2021",
+        "01-06-2021",
+        "01-07-2021",
+        "01-08-2021",
+        "01-09-2021",
+    ]
+
+
+    var comments = [
+        `<div id="comment_0" class="fb-comments d-none" data-href="http://andy-autos.herokuapp.com/index.html" data-width="" data-numposts="5"></div>`,
+        `<div id="comment_1" class="fb-comments d-none" data-href="http://andy-autos.herokuapp.com/1" data-width="" data-numposts="5"></div>`,
+        `<div id="comment_2" class="fb-comments d-none" data-href="http://andy-autos.herokuapp.com/2" data-width="" data-numposts="5"></div>`,
+        `<div id="comment_3" class="fb-comments d-none" data-href="http://andy-autos.herokuapp.com/3" data-width="" data-numposts="5"></div>`,
+        `<div id="comment_4" class="fb-comments d-none" data-href="http://andy-autos.herokuapp.com/4" data-width="" data-numposts="5"></div>`,
+        `<div id="comment_5" class="fb-comments d-none" data-href="http://andy-autos.herokuapp.com/5" data-width="" data-numposts="5"></div>`,
+        `<div id="comment_6" class="fb-comments d-none" data-href="http://andy-autos.herokuapp.com/6" data-width="" data-numposts="5"></div>`,
+        `<div id="comment_7" class="fb-comments d-none" data-href="http://andy-autos.herokuapp.com/7" data-width="" data-numposts="5"></div>`,
+        `<div id="comment_8" class="fb-comments d-none" data-href="http://andy-autos.herokuapp.com/8" data-width="" data-numposts="5"></div>`,
+        `<div id="comment_9" class="fb-comments d-none" data-href="http://andy-autos.herokuapp.com/9" data-width="" data-numposts="5"></div>`,
+    ]
+
+
+
+    for (let i = img.length - 1; i >= 0; i--) {
         $('.content').append(`<div style="min-height: 420px; overflow: hidden; margin-top: 20px" class="col-12 col-md-6">
-            <div style="height: 300px" class="col-12"><img style="width: 100%; height: 100%; object-fit: cover" src="${img[i]}"></div>
+            <div style="height: 300px;margin-bottom: 10px" class="col-12"><img style="border-radius: 8px;width: 100%; height: 100%; object-fit: cover" src="${img[i]}"></div>
+            <p>${months[i]}</p>
             <div class="col-12"><p>${content[i]}</p></div>
             <div class="col-12">
             <i style="font-size: 25px; color: #727171" class="fas fa-share-square"></i>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <i slot="${i}" onclick="comment(this.slot)" style="font-size: 25px; color: #727171" class="fas fa-comments"></i>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <i style="font-size: 25px; color: #e55656" class="far fa-heart"></i>
-            <div id="comment_${i}" class="fb-comments d-none" data-href="http://andy-autos.herokuapp.com/index.html" data-width="" data-numposts="5"></div>
+            <i style="font-size: 25px; color: #5d88ff" class="far fa-heart"></i>
+            ${comments[i]}
 </div>
 </div>`)
     }
 })
 
-function comment(id){
+function comment(id) {
     $(`#comment_${id}`).toggleClass('d-none')
 }

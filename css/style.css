@@ -88,13 +88,22 @@ a{
 
 i {
     cursor: pointer;
+    transition: 0.3s;
 }
+
+i:hover{
+    color: #ff4242!important;
+}
+
+
 
 
 header {
     position: sticky;
-    top: 0;
+    top: 1px;
     z-index: 1000;
+    border-radius: 5px;
+    margin-bottom: 3px;
 }
 
 .nav > li:hover {
@@ -103,4 +112,20 @@ header {
 
 .nav > li {
     margin: 0 10px;
+}
+
+
+.call_me_now {
+    height: 70px;
+    width: 70px;
+    color: aliceblue;
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:25px ;
+    border-radius: 50%;
+    background: #212529;
 }
