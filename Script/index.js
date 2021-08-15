@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     for (let i = img.length - 1; i >= 0; i--) {
         $('.content').append(`<div style="min-height: 420px; overflow: hidden; margin-top: 20px" class="col-12 col-md-6">
-            <div style="height: 300px;margin-bottom: 10px" class="col-12"><img style="border-radius: 8px;width: 100%; height: 100%; object-fit: cover" src="${img[i]}"></div>
+            <div style="height: 300px;margin-bottom: 10px" class="col-12"><img onclick="show_image(this.src)" style="cursor: pointer;border-radius: 8px;width: 100%; height: 100%; object-fit: cover" src="${img[i]}"></div>
             <p>${months[i]}</p>
             <div class="col-12"><p>${content[i]}</p></div>
             <div class="col-12">
@@ -78,4 +78,39 @@ document.addEventListener('DOMContentLoaded', function () {
 
 function comment(id) {
     $(`#comment_${id}`).toggleClass('d-none')
+}
+
+
+
+
+
+
+
+
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+
+
+
+
+
+
+function show_image(src){
+    modal.style.display = "block";
+    modalImg.src = src;
+    modalImg.alt = hello;
 }
