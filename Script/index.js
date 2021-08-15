@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     for (let i = img.length - 1; i >= 0; i--) {
         $('.content').append(`<div style="min-height: 420px; overflow: hidden; margin-top: 20px" class="col-12 col-md-6">
-            <div style="height: 300px;margin-bottom: 10px" class="col-12"><img onclick="show_image(this.src)" style="cursor: pointer;border-radius: 8px;width: 100%; height: 100%; object-fit: cover" src="${img[i]}"></div>
+            <div style="height: 300px;margin-bottom: 10px" class="col-12"><img class="images_car" onclick="show_image(this.src)" style="cursor: pointer;border-radius: 8px;width: 100%; height: 100%; object-fit: cover" src="${img[i]}"></div>
             <p>${months[i]}</p>
             <div class="col-12"><p>${content[i]}</p></div>
             <div class="col-12">
